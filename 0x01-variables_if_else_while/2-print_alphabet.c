@@ -1,17 +1,20 @@
 #include <stdio.h>
+
 /**
 *main - void
 *Return: 0
 */
 
-int main (void)
+int main(void)
 
 {
 	int a = 97;
-	char b = a;
-	while(b < 123){
-	putchar("value of a: %d\n", b);
-	a++;	
+
+	while (a < 123)
+	{
+		putchar(a);
+		a++;
 	}
-	return 0;
+	putchar('\n');
+	return (0);
 }
