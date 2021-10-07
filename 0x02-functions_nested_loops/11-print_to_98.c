@@ -22,7 +22,7 @@ void print_to_98(int n)
 		{
 			printf("%d\n", a);
 		}
-		else if (a <= 99)
+		else if (a < 99)
 		{
 			printf("%d, ", a);
 		}
