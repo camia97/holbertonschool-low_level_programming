@@ -8,7 +8,7 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int ini;
+	unsigned int ini;
 
 	for (ini = 0; dest[ini] != '\0' && ini < n; ini++)
 		dest[ini] = src[ini];
