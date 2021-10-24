@@ -1,2 +1,2 @@
 #bin/bash
-ar rcs liball.a | gcc -Wall -c \*.c
+gcc . -Wall -c "*.c" | ar rcs liball.a "*.o"
