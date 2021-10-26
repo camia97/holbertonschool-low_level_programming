@@ -35,4 +35,5 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == 0)
 		return (NULL);
 	return (ptr);
+	return (NULL);
 }
