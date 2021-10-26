@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		ptr[larg3] = s1[larg3];
 	}
-	for (larg4 = 0; larg3 + larg4 < larg1 + larg2; larg4++)
+	for (larg4 = 0; larg3 + larg4 <= larg1 + larg2; larg4++)
 	{
 		ptr[larg4 + larg3] = s2[larg4];
 	}
