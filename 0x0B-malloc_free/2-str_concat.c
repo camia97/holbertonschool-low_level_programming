@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	ptr = malloc(sizeof(char) * (larg1 + larg2) + 1);
-	for (larg3 = 0; s1[larg3] != '\0'; larg3++)
+	for (larg3 = 0; larg3 < larg1; larg3++)
 	{
 		ptr[larg3] = s1[larg3];
 	}
