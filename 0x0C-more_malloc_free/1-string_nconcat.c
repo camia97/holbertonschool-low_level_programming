@@ -26,8 +26,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr == 0)
 		return (0);
 	for (larg3 = 0; larg3 < larg1; larg3++)
+	{
 		ptr[larg3] = s1[larg3];
+	}
 	for (larg4 = larg3; larg4 < larg3 + n; larg4++)
+	{
 		ptr[larg4] = s2[larg4 - larg3];
+	}
 	return (ptr);
 }
