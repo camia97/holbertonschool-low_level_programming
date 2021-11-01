@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int larg, olarg;
+	unsigned int larg, olarg;
 
 	if (str == 0)
 		return (NULL);
@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	{
 		return (0);
 	}
-	for (olarg = 0; ptr[olarg] <= larg; olarg++)
+	for (olarg = 0; olarg <= larg; olarg++)
 	{
 		ptr[olarg] = str[olarg];
 	}
