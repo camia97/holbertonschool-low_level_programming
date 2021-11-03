@@ -7,12 +7,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	int larg;
-
-	for (larg = 0; name[larg] != '\0'; larg++)
-	{
-		_putchar(name[larg]);
-	}
-	f = ;
-
+	if (f != 0)
+		f(name);
 }
