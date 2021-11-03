@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdio.h>
 /**
  * get_op_func - function that selects the correct function
  * @s: pointer to char
@@ -24,4 +25,6 @@ int (*get_op_func(char *s))(int, int)
 		a++;
 	}
 	return (0);
+	printf(Error);
+	exit(99);
 }
