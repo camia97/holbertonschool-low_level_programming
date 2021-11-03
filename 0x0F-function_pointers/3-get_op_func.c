@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * get_op_func - function that selects the correct function
  * @s: pointer to char
@@ -20,11 +21,11 @@ int (*get_op_func(char *s))(int, int)
 
 	while (a < 5)
 	{
-		if (ops[a].op[0] == s[0])
+		if (ops[a].op[0] == s[0] && !s[1])
 			return (ops[a].f);
 		a++;
 	}
 	return (0);
-	printf(Error);
+	printf("Error\n");
 	exit(99);
 }
