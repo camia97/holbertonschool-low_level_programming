@@ -8,7 +8,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int a, b;
-	int c = 1;
+	int c = 0;
 	char *ptr;
 
 	for (a = 0; s[a] != '\0'; a++)
@@ -20,7 +20,6 @@ char *_strpbrk(char *s, char *accept)
 			ptr = &s[c];
 			return (ptr);
 		}
-		break;
 	}
 	return (0);
 }

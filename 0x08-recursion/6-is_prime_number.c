@@ -7,14 +7,16 @@
  */
 int aux(int v, int r)
 {
-	if (v % v == 0 && v % 1 == 0)
-	{
-		return (v);
-	}
 	if (v % r == 0)
+	{
+		return (0);
+	}
+	else
 	{
 		return (aux(v, r + 1));
 	}
+	return (1);
+
 }
 
 /**
@@ -24,12 +26,5 @@ int aux(int v, int r)
  */
 int is_prime_number(int n)
 {
-	if (aux(n, 2))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+		return (aux(n, 2));
 }
