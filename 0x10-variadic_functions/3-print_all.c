@@ -8,41 +8,41 @@
  */
 void print_all(const char * const format, ...)
 {
-	int count = 0;
+	int count = 0, c = 0;
 	va_list elements;
 	char *aux, *sep;
 
 	va_start(elements, format);
-	sep = "";
+	sep = ", ";
+	while (format && format[c])
+	{
+		c++;
+	}
 	while (format && format[count])
 	{
+		if (count == c - 1)
+			sep = "";
 		switch (format[count])
 		{
 			case ('c'):
-				printf("%s", sep);
-				printf("%c", va_arg(elements, int));
+				printf("%c%s", va_arg(elements, int), sep);
 			break;
 			case ('i'):
-				printf("%s", sep);
-				printf("%d", va_arg(elements, int));
+				printf("%d%s", va_arg(elements, int), sep);
 			break;
 			case ('s'):
 				aux = va_arg(elements, char *);
 				if (aux == 0)
 				{
-					printf("%s", sep);
 					printf("(nil)");
 					break;
 				}
-				printf("%s", sep);
-				printf("%s", aux);
+				printf("%s%s", aux, sep);
 			break;
 			case ('f'):
-				printf("%s", sep);
-				printf("%f", va_arg(elements, double));
+				printf("%f%s", va_arg(elements, double), sep);
 			break;
 		}
-		sep = ", ";
 		count++;
 	}
 	printf("\n");
