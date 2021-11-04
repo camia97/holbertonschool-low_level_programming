@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 	}
 	while (format && format[count])
 	{
-		if (count == c - 1)
+		if (count == (c - 1))
 			sep = "";
 		switch (format[count])
 		{
@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 				aux = va_arg(elements, char *);
 				if (aux == 0)
 				{
-					printf("(nil)");
+					printf("(nil)%s", sep);
 					break;
 				}
 				printf("%s%s", aux, sep);
