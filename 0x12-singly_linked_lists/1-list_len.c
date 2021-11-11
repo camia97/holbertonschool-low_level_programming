@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * list_len - return the numbers of nodes
  * @h: pointer to a list
@@ -14,7 +13,7 @@ size_t list_len(const list_t *h)
 		node++;
 		if (h->next)
 		{
-			node += print_list(h->next);
+			node += list_len(h->next);
 		}
 	}
 	return (node);
