@@ -9,8 +9,7 @@ int main(void)
 {
 	int i;
 
-	i = 98;
-	printf("%d is positive\n", i);
+	i = 0;
 
 	return (0);
 }
