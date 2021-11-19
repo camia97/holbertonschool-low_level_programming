@@ -6,7 +6,8 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int conv = 0, a, res, bn;
+	unsigned int conv = 0;
+	int a, larg;
 
 	if (!b)
 		return (0);
@@ -15,12 +16,13 @@ unsigned int binary_to_uint(const char *b)
 		if (b[a] != '0' && b[a] != '1')
 			return (0);
 	}
-	bn = atoi(b);
-	for (a = 0; bn; a++)
+	larg = (a - 1);
+	for (a = larg; a >= 0; a--)
 	{
-		res = bn % 10;
-		conv += res << a;
-		bn = bn / 10;
+		if (b[a] == '1')
+		{
+			conv += 1 << (larg - a);
+		}
 	}
 	return (conv);
 }
