@@ -7,7 +7,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int conv = 0, a, res, bn;
-	
+
 	if (!b)
 		return (0);
 	for (a = 0; b[a]; a++)
