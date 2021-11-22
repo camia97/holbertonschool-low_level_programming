@@ -16,6 +16,11 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (!aux)
 		return (-1);
+	if (!text_content)
+	{
+		close(aux);
+		return (1);
+	}
 	for (c = 0; text_content[c]; c++)
 		;
 	w = write(aux, text_content, c);
