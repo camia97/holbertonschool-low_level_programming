@@ -6,8 +6,8 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int;
-	hash_node_t *tmp;
+	unsigned long int i;
+	hash_node_t *tmp = NULL;
 	char *str;
 
 	if (!ht)
@@ -21,8 +21,8 @@ void hash_table_print(const hash_table_t *ht)
 		while (tmp)
 		{
 			printf("%s'%s': '%s'", str, tmp->key, tmp->value);
-			str = ", ";
 			tmp = tmp->next;
+			str = ", ";
 		}
 		i++;
 	}
