@@ -7,7 +7,7 @@ RM=rm
 .PHONY: all
 all: $(NAME)
 
-school: $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 .PHONY: clean
