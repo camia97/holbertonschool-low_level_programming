@@ -13,7 +13,7 @@ $(NAME): $(OBJ)
 
 .PHONY: clean
 clean:
-	$(RM) -f $(Name) *~
+	$(RM) -f $(NAME) *~
 
 .PHONY: oclean
 oclean:
