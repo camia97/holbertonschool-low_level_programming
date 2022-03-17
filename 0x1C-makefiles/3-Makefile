@@ -4,9 +4,10 @@ OBJ=$(SRC:.c=.o)
 NAME=school
 RM=rm
 
+.PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJ)
+school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 .PHONY: clean
